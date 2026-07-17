@@ -1,0 +1,8 @@
+POST http://localhost:8080/users
+Content-Type: application/json
+Authorization: 4cab7da0-7d6e-457b-8e36-df242b143b72
+
+{
+  "name": "Muhammad Akram",
+  "email": "akram@example.com"
+}
