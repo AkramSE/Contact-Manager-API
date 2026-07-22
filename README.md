@@ -1,10 +1,13 @@
 # 📇 Contact Manager REST API
 
-![Java](https://img.shields.io/badge/Java-17-orange.svg)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)
-![Hibernate](https://img.shields.io/badge/Hibernate-ORM-blue.svg)
+![Java](https://img.shields.io/badge/Java-17-orange.svg?style=for-the-badge&logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg?style=for-the-badge&logo=springboot)
+![Hibernate](https://img.shields.io/badge/Hibernate-ORM-blue.svg?style=for-the-badge&logo=hibernate)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-A robust, enterprise-grade backend API developed in **Java** and **Spring Boot**. This project demonstrates industry-standard backend architecture, focusing on clean code, secure data transfer, strict validation protocols, and structured error handling.
+A robust, enterprise-grade backend API developed in **Java** and **Spring Boot**. This project demonstrates industry-standard backend architecture, focusing on clean code, secure data transfer, strict validation protocols, and structured error handling. It serves as the powerful backend engine for the Contact Manager React Application.
+
+---
 
 ## 🚀 Key Features
 
@@ -14,21 +17,24 @@ A robust, enterprise-grade backend API developed in **Java** and **Spring Boot**
 * **Global Exception Handling:** Utilized `@RestControllerAdvice` to intercept system errors and stack traces, translating them into clean, standardized, and user-friendly JSON responses.
 * **Relational Database Mapping:** Configured a seamless `One-to-Many` relationship between `User` and `Contact` entities using Spring Data JPA.
 
+---
+
 ## 🛠️ Technical Stack
 
 * **Language:** Java (JDK 17+)
 * **Framework:** Spring Boot 3.x
 * **Persistence:** Spring Data JPA / Hibernate
-* **Database:** H2 In-Memory Database
+* **Database:** MySQL *(or configured database)*
 * **Architecture:** N-Tier Architecture (Controller > Service > Repository > Entity/DTO)
 
-## ⚙️ Getting Started (How to Run)
+---
 
-### Prerequisites
-* Java 17 or higher installed
-* IDE (IntelliJ IDEA, Eclipse, or VS Code)
-
-### Installation Steps
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/AkramSE/Contact-Manager-API.git](https://github.com/AkramSE/Contact-Manager-API.git)
+## 📂 Architecture & Directory Structure
+```text
+src/main/java/com/tenpearls/contact_manager/
+ ├── controller/       # Handles incoming HTTP requests and responses
+ ├── service/          # Contains core business logic
+ ├── repository/       # Interfaces for database interactions (Spring Data JPA)
+ ├── entity/           # Database models and mappings
+ ├── dto/              # Data Transfer Objects for secure communication
+ └── exception/        # Global exception handlers and custom error classes
