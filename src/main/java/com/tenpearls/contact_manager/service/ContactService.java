@@ -18,8 +18,21 @@ public class ContactService {
     private UserRepository userRepository;
 
     public Contact addContact(Long userId, Contact contact) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-        contact.setUser(user); // Contact ko user ke sath jor diya
+        com.tenpearls.contact_manager.entity.User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+        contact.setUser(user);
+
+        if (contact.getEmails() != null) {
+            for (com.tenpearls.contact_manager.entity.Email email : contact.getEmails()) {
+                email.setContact(contact);
+            }
+        }
+
+        if (contact.getPhones() != null) {
+            for (com.tenpearls.contact_manager.entity.Phone phone : contact.getPhones()) {
+                phone.setContact(contact);
+            }
+        }
+
         return contactRepository.save(contact);
     }
 
@@ -38,7 +51,6 @@ public class ContactService {
         existingContact.setLastName(contactDetails.getLastName());
         existingContact.setTitle(contactDetails.getTitle());
 
-        // New data database mein save kar dein
         return contactRepository.save(existingContact);
     }
 }

@@ -1,4 +1,5 @@
 package com.tenpearls.contact_manager.entity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,6 +18,7 @@ public class Phone {
     private String label; // Example: Home, Work, Mobile
 
     // OOPs: Many Phone numbers belong to One Contact
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "contact_id", nullable = false)
     private Contact contact;

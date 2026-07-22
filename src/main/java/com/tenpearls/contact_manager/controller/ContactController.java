@@ -29,6 +29,8 @@ public class ContactController {
             dto.setFirstName(contact.getFirstName());
             dto.setLastName(contact.getLastName());
             dto.setTitle(contact.getTitle());
+            dto.setEmails(contact.getEmails());
+            dto.setPhones(contact.getPhones());
             return dto;
         }).collect(Collectors.toList());
     }
