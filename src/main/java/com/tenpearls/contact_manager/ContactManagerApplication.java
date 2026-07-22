@@ -15,14 +15,14 @@ public class ContactManagerApplication {
 		return args -> {
 			com.tenpearls.contact_manager.entity.User user = new com.tenpearls.contact_manager.entity.User();
 			user.setName("Admin");
-			// Email mein waqt isliye daala taake 'Email already exists' ka error na aaye
+			// Appending current timestamp to email to prevent 'Email already exists' constraint violation
 			user.setEmail("admin" + System.currentTimeMillis() + "@test.com");
 			user.setPassword("password123");
 			user.setRole("USER");
 
 			user = userRepository.save(user);
 			System.out.println("==========================================================");
-			System.out.println("NAYA USER BAN GAYA HAI! ISKI ASLI ID HAI: " + user.getId());
+			System.out.println("NEW USER CREATED SUCCESSFULLY! GENERATED ID IS: " + user.getId());
 			System.out.println("==========================================================");
 		};
 	}

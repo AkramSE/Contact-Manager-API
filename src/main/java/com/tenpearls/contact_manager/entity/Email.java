@@ -19,7 +19,7 @@ public class Email {
 
     private String label; // Example: "Work", "Personal"
 
-    // OOPs: Many Emails belong to One Contact
+    // Database Relationship: Multiple Email records can map back to a single Contact
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "contact_id", nullable = false)

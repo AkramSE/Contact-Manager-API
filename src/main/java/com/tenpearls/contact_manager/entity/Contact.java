@@ -22,12 +22,12 @@ public class Contact {
 
     private String title;
 
-    // OOPs Concept: Many Contacts belong to One User
+    // Database Relationship: Many Contacts can belong to a single User
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    // Collection Framework : Ek contact ke andar List of Emails aur Phones
+    // Collection Mapping: A single Contact can have multiple Emails and Phone numbers associated with it
     @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private java.util.List<Email> emails;
 

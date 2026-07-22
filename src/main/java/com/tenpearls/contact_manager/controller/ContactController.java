@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001"}) // <--- Yeh nayi line yahan add karni hai
 @RequestMapping("/users/{userId}/contacts")
 public class ContactController {
     @Autowired
