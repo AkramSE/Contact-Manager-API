@@ -6,7 +6,7 @@
 ![Testing](https://img.shields.io/badge/Testing-JUnit_5_%7C_Mockito-red.svg)
 ![Database](https://img.shields.io/badge/Database-SQL_Server-lightgrey.svg)
 
-A robust, enterprise-grade backend API developed in **Java** and **Spring Boot**. This project demonstrates industry-standard backend architecture, focusing on clean code, secure data transfer, strict validation protocols, and structured error handling. It serves as the powerful backend engine for the Contact Manager React Application.
+A robust, enterprise-grade backend API developed in **Java** and **Spring Boot**. This project demonstrates industry-standard backend architecture, focusing on clean code, secure data transfer, strict validation protocols, and structured error handling. It serves as the powerful backend engine for the [Contact Manager React Application](https://github.com/AkramSE/Contact-Manager-UI.git).
 
 ## 🚀 Key Features
 
@@ -42,4 +42,8 @@ src/main/java/com/tenpearls/contact_manager/
  ├── exception/    # Global Exception Handlers & Custom Exceptions
  ├── repository/   # Spring Data JPA Interfaces
  ├── security/     # JWT Filters, Auth Entry Points & Services
- └── service/      # Core Business Logic
+ └── service/      # Core Business Logic 
+
+🔗 Links & Let's Connect
+🌐 Frontend Client: https://github.com/AkramSE/Contact-Manager-UI.git
+💼 LinkedIn: https://linkedin.com/in/muhammad-akram-se 
