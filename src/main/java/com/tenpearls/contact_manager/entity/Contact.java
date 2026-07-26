@@ -28,9 +28,11 @@ public class Contact {
     private User user;
 
     // Collection Mapping: A single Contact can have multiple Emails and Phone numbers associated with it
+    // update the relation of email
     @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
-    private java.util.List<Email> emails;
+    private java.util.List<EmailEntity> emails = new java.util.ArrayList<>();
 
+    // updates the relation of phone
     @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
-    private java.util.List<Phone> phones;
+    private java.util.List<PhoneEntity> phones = new java.util.ArrayList<>();
 }

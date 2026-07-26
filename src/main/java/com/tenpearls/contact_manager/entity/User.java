@@ -26,7 +26,7 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonIgnore // Infinite loop se bachne ke liye
+    @JsonIgnore // Prevents infinite recursion during JSON serialization.
     private List<Contact> contacts;
     private String role;
 }

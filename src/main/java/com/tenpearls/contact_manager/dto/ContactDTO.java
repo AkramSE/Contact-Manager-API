@@ -8,6 +8,6 @@ public class ContactDTO {
     private String firstName;
     private String lastName;
     private String title;
-    private java.util.List<com.tenpearls.contact_manager.entity.Email> emails;
-    private java.util.List<com.tenpearls.contact_manager.entity.Phone> phones;
+    private java.util.List<com.tenpearls.contact_manager.entity.EmailEntity> emails;
+    private java.util.List<com.tenpearls.contact_manager.entity.PhoneEntity> phones;
 }
