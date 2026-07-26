@@ -15,7 +15,8 @@ public class JwtUtil {
     private static final Key SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     // Token expiration time configuration (e.g., 10 hours).
-    private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 10;
+    // Added 'L' to 1000 to cast the multiplication to long and prevent integer overflow.
+    private static final long EXPIRATION_TIME = 1000L * 60 * 60 * 10;
 
     // Generates a new JWT token using the email identifier.
     public String generateToken(String email) {
