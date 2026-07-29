@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin(originPatterns = "*", allowCredentials = "true")
 public class UserController {
 
     // Initializes the logger instance for application tracing and debugging.
