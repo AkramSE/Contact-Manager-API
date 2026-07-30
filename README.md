@@ -1,26 +1,29 @@
-
-# ðŸ“‡ Contact Manager â€“ Enterprise REST API
+# 📇 Contact Manager – Enterprise REST API
 
 > Enterprise-grade Contact Manager backend built with **Java 17**, **Spring Boot 3**, **Spring Security**, **JWT**, **Spring Data JPA**, and **MySQL**.
 
-## âœ¨ Features
+---
 
-- ðŸ” JWT Authentication & Authorization
-- ðŸ‘¤ User Registration & Login
-- ðŸ“‡ Contact CRUD Operations
-- ðŸ“„ Pagination & Search
-- âœ… DTO Architecture
-- âœ… Bean Validation
-- ðŸ›¡ Global Exception Handling
-- ðŸ”‘ BCrypt Password Encryption
-- ðŸ“œ SLF4J + Logback Logging
-- ðŸ§ª JUnit 5 & Mockito Testing
-- ðŸ—„ Spring Data JPA + Hibernate
+# ✨ Features
 
-## ðŸ›  Tech Stack
+- 🔐 JWT Authentication & Authorization
+- 👤 User Registration & Login
+- 📇 Contact CRUD Operations
+- 📄 Pagination & Search
+- ✅ DTO Architecture
+- ✅ Bean Validation
+- 🛡️ Global Exception Handling
+- 🔑 BCrypt Password Encryption
+- 📜 SLF4J + Logback Logging
+- 🧪 JUnit 5 & Mockito Testing
+- 🗄️ Spring Data JPA + Hibernate
+
+---
+
+# 🛠️ Tech Stack
 
 | Technology | Version |
-|---|---|
+|------------|----------|
 | Java | 17 |
 | Spring Boot | 3.x |
 | Spring Security | Latest |
@@ -29,28 +32,36 @@
 | Database | MySQL / SQL Server |
 | Testing | JUnit 5, Mockito |
 
-## ðŸ“ Project Structure
+---
+
+# 📁 Project Structure
 
 ```text
 src/main/java/com/tenpearls/contact_manager/
-â”œâ”€â”€ config/
-â”œâ”€â”€ controller/
-â”œâ”€â”€ dto/
-â”œâ”€â”€ entity/
-â”œâ”€â”€ exception/
-â”œâ”€â”€ repository/
-â”œâ”€â”€ security/
-â””â”€â”€ service/
+├── config/
+├── controller/
+├── dto/
+├── entity/
+├── exception/
+├── repository/
+├── security/
+└── service/
 ```
 
-## ðŸš€ Getting Started
+---
+
+# 🚀 Getting Started
+
+Clone Repository
 
 ```bash
 git clone https://github.com/AkramSE/Contact-Manager-API.git
 cd Contact-Manager-API
 ```
 
-Configure:
+---
+
+## Configure Database
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/contact_manager_db
@@ -59,42 +70,71 @@ spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-Run:
+---
+
+## Run Application
 
 ```bash
 ./mvnw clean install
 ./mvnw spring-boot:run
 ```
 
-## ðŸ” Security
+---
+
+# 🔐 Security
 
 - JWT based authentication
-- Stateless sessions
-- BCrypt password hashing
-- Protected REST endpoints
+- Stateless Sessions
+- BCrypt Password Hashing
+- Protected REST Endpoints
 
-## ðŸ“Œ Backend Architecture
+---
 
-Controller â†’ Service â†’ Repository â†’ Database
+# 📌 Backend Architecture
 
-DTOs isolate API payloads from entities.
+```text
+Controller
+    │
+    ▼
+Service
+    │
+    ▼
+Repository
+    │
+    ▼
+Database
+```
 
-## ðŸ§ª Testing
+DTOs isolate API payloads from database entities.
 
-- Unit testing with JUnit 5
-- Mockito for service isolation
+---
 
-## ðŸŒ Frontend
+# 🧪 Testing
+
+- Unit Testing using JUnit 5
+- Mockito for Service Layer Testing
+- Isolated Business Logic Tests
+
+---
+
+# 🌐 Frontend Repository
 
 https://github.com/AkramSE/Contact-Manager-UI
 
-## ðŸ‘¨â€ðŸ’» Author
+---
+
+# 👨‍💻 Author
 
 **Muhammad Akram**
 
-LinkedIn: https://linkedin.com/in/muhammad-akram-se
+LinkedIn
 
-GitHub: https://github.com/AkramSE
+https://linkedin.com/in/muhammad-akram-se
+
+GitHub
+
+https://github.com/AkramSE
 
 ---
-Made with â¤ï¸ using Java & Spring Boot.
+
+Made with ❤️ using **Java**, **Spring Boot**, and **Spring Security**. 
