@@ -1,44 +1,100 @@
-# 📇 Contact Manager - Enterprise REST API
 
-![Java](https://img.shields.io/badge/Java-17-orange.svg?style=for-the-badge&logo=java)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-brightgreen.svg?style=for-the-badge&logo=springboot)
-![Security](https://img.shields.io/badge/Spring_Security-JWT-blue.svg?style=for-the-badge&logo=springsecurity)
-![Database](https://img.shields.io/badge/Database-MySQL_%7C_SQL_Server-lightgrey.svg?style=for-the-badge&logo=mysql)
-![Testing](https://img.shields.io/badge/Testing-JUnit_5_%7C_Mockito-red.svg?style=for-the-badge)
+# ðŸ“‡ Contact Manager â€“ Enterprise REST API
 
-> A robust, enterprise-grade backend API engineered with **Java** and **Spring Boot**. This project demonstrates industry-standard software architecture, emphasizing clean code principles, stateless authentication, strict validation protocols, and comprehensive error handling. It serves as the high-performance backend engine for the [Contact Manager React Application](https://github.com/AkramSE/Contact-Manager-UI.git).
+> Enterprise-grade Contact Manager backend built with **Java 17**, **Spring Boot 3**, **Spring Security**, **JWT**, **Spring Data JPA**, and **MySQL**.
 
----
+## âœ¨ Features
 
-## 🚀 Key Features & Capabilities
+- ðŸ” JWT Authentication & Authorization
+- ðŸ‘¤ User Registration & Login
+- ðŸ“‡ Contact CRUD Operations
+- ðŸ“„ Pagination & Search
+- âœ… DTO Architecture
+- âœ… Bean Validation
+- ðŸ›¡ Global Exception Handling
+- ðŸ”‘ BCrypt Password Encryption
+- ðŸ“œ SLF4J + Logback Logging
+- ðŸ§ª JUnit 5 & Mockito Testing
+- ðŸ—„ Spring Data JPA + Hibernate
 
-*   **🔒 Stateless JWT Security:** Fully secured API endpoints utilizing Spring Security and JSON Web Tokens (JWT). Features encrypted password hashing (BCrypt) and secure user session management.
-*   **⚙️ Optimized CRUD Operations:** High-performance endpoints for Creating, Reading, Updating, and Deleting contacts, enhanced with server-side pagination and dynamic search filtering for large datasets.
-*   **🛡️ DTO Design Pattern:** Strict implementation of Data Transfer Objects (DTOs) to decouple database entities from the presentation layer, preventing over-posting vulnerabilities and infinite JSON recursion.
-*   **✅ Robust Data Validation:** Integrated `jakarta.validation` (`@Valid`, `@NotBlank`, `@Email`, etc.) to enforce data integrity and sanitize inputs at the controller level before reaching the business logic.
-*   **🛑 Global Exception Handling:** Centralized `@RestControllerAdvice` to intercept system anomalies (e.g., `ResourceNotFoundException`, `MethodArgumentNotValidException`) and translate them into standardized, predictable JSON error responses.
-*   **📜 Comprehensive Audit Logging:** Implemented **SLF4J** and **Logback** for strategic application logging, enabling effective tracking of system events, user actions, and error tracing.
-*   **🧪 Test-Driven Development (TDD):** Business logic thoroughly verified using **JUnit 5** and **Mockito**, ensuring reliable operations and isolating the service layer from database dependencies.
+## ðŸ›  Tech Stack
 
----
+| Technology | Version |
+|---|---|
+| Java | 17 |
+| Spring Boot | 3.x |
+| Spring Security | Latest |
+| JWT | io.jsonwebtoken |
+| Spring Data JPA | Hibernate |
+| Database | MySQL / SQL Server |
+| Testing | JUnit 5, Mockito |
 
-## 🛠️ Technical Stack
+## ðŸ“ Project Structure
 
-| Category | Technology |
-| :--- | :--- |
-| **Core Language** | Java (JDK 17+) |
-| **Framework** | Spring Boot 3.x |
-| **Security & Auth** | Spring Security, JWT (`io.jsonwebtoken`) |
-| **ORM & Persistence** | Spring Data JPA / Hibernate |
-| **Database** | MySQL / SQL Server |
-| **Testing Suite** | JUnit 5, Mockito |
-| **Logging** | SLF4J, Logback |
+```text
+src/main/java/com/tenpearls/contact_manager/
+â”œâ”€â”€ config/
+â”œâ”€â”€ controller/
+â”œâ”€â”€ dto/
+â”œâ”€â”€ entity/
+â”œâ”€â”€ exception/
+â”œâ”€â”€ repository/
+â”œâ”€â”€ security/
+â””â”€â”€ service/
+```
 
----
+## ðŸš€ Getting Started
 
-## ⚙️ Quick Start & Installation
-
-**1. Clone the repository**
 ```bash
-git clone [https://github.com/AkramSE/Contact-Manager-API.git](https://github.com/AkramSE/Contact-Manager-API.git)
+git clone https://github.com/AkramSE/Contact-Manager-API.git
 cd Contact-Manager-API
+```
+
+Configure:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/contact_manager_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+```
+
+Run:
+
+```bash
+./mvnw clean install
+./mvnw spring-boot:run
+```
+
+## ðŸ” Security
+
+- JWT based authentication
+- Stateless sessions
+- BCrypt password hashing
+- Protected REST endpoints
+
+## ðŸ“Œ Backend Architecture
+
+Controller â†’ Service â†’ Repository â†’ Database
+
+DTOs isolate API payloads from entities.
+
+## ðŸ§ª Testing
+
+- Unit testing with JUnit 5
+- Mockito for service isolation
+
+## ðŸŒ Frontend
+
+https://github.com/AkramSE/Contact-Manager-UI
+
+## ðŸ‘¨â€ðŸ’» Author
+
+**Muhammad Akram**
+
+LinkedIn: https://linkedin.com/in/muhammad-akram-se
+
+GitHub: https://github.com/AkramSE
+
+---
+Made with â¤ï¸ using Java & Spring Boot.
