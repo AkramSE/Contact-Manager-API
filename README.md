@@ -456,20 +456,6 @@ application-local.properties
 application-secret.properties
 ```
 
-## Roadmap
-
-- [ ] Refresh tokens
-- [ ] Email verification
-- [ ] Forgot-password flow
-- [ ] Role-based access control
-- [ ] Swagger/OpenAPI documentation
-- [ ] Docker support
-- [ ] Integration tests
-- [ ] GitHub Actions CI/CD
-- [ ] Rate limiting
-- [ ] Redis caching
-- [ ] Monitoring and metrics
-
 ## Contributing
 
 ```bash
