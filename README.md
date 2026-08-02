@@ -1,6 +1,6 @@
 <div align="center">
 
-# Contact Manager - Enterprise REST API
+# 💻 Contact Manager - Enterprise REST API
 
 **Secure, scalable, and production-ready contact management backend built with Java and Spring Boot.**
 
@@ -134,35 +134,18 @@ Protected requests must include the token in the authorization header:
 Authorization: Bearer <jwt-token>
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
-Contact-Manager-API/
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ main/
-â”‚   â”‚   â”œâ”€â”€ java/
-â”‚   â”‚   â”‚   â””â”€â”€ com/tenpearls/contact_manager/
-â”‚   â”‚   â”‚       â”œâ”€â”€ config/
-â”‚   â”‚   â”‚       â”œâ”€â”€ controller/
-â”‚   â”‚   â”‚       â”œâ”€â”€ dto/
-â”‚   â”‚   â”‚       â”œâ”€â”€ entity/
-â”‚   â”‚   â”‚       â”œâ”€â”€ exception/
-â”‚   â”‚   â”‚       â”œâ”€â”€ repository/
-â”‚   â”‚   â”‚       â”œâ”€â”€ security/
-â”‚   â”‚   â”‚       â”œâ”€â”€ service/
-â”‚   â”‚   â”‚       â””â”€â”€ ContactManagerApplication.java
-â”‚   â”‚   â””â”€â”€ resources/
-â”‚   â”‚       â”œâ”€â”€ application.properties
-â”‚   â”‚       â”œâ”€â”€ application-dev.properties
-â”‚   â”‚       â””â”€â”€ application-prod.properties
-â”‚   â””â”€â”€ test/
-â”‚       â””â”€â”€ java/
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ mvnw
-â”œâ”€â”€ mvnw.cmd
-â”œâ”€â”€ pom.xml
-â””â”€â”€ README.md
-```
+src/main/java/com/tenpearls/contact_manager/
+├── config/         # Security and application configurations
+├── controller/     # RESTful endpoints handling HTTP requests
+├── dto/            # Data Transfer Objects for payload isolation
+├── entity/         # JPA Entities mapping to database tables
+├── exception/      # Global exception handlers and custom exceptions
+├── repository/     # Spring Data JPA interfaces
+├── security/       # JWT filters, entry points, and providers
+└── service/        # Core business logic implementation
 
 ## Database Design
 
