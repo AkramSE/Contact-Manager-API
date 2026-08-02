@@ -1,184 +1,67 @@
 <div align="center">
 
-# ðŸ“‡ Contact Manager â€” Enterprise REST API
+# Contact Manager - Enterprise REST API
 
-### Secure, Scalable & Production-Ready Contact Management Backend
+**Secure, scalable, and production-ready contact management backend built with Java and Spring Boot.**
 
 [![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![Spring Security](https://img.shields.io/badge/Spring_Security-JWT-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)](https://spring.io/projects/spring-security)
 [![MySQL](https://img.shields.io/badge/MySQL-Aiven_Cloud-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Railway](https://img.shields.io/badge/Backend-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/)
-[![Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![JUnit 5](https://img.shields.io/badge/Testing-JUnit_5-25A162?style=for-the-badge&logo=junit5&logoColor=white)](https://junit.org/junit5/)
-[![Mockito](https://img.shields.io/badge/Mocking-Mockito-78A641?style=for-the-badge)](https://site.mockito.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](#-license)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](#license)
 
-<br />
-
-A production-ready backend REST API built with **Java 17**, **Spring Boot 3**, **Spring Security**, **JWT**, **Spring Data JPA**, and **MySQL**.
-
-The system follows a clean layered architecture and provides secure authentication, contact management, pagination, search, validation, centralized exception handling, logging, unit testing, and cloud deployment.
-
-<br />
-
-[ðŸš€ Live Application](https://contact-manager-ui-alpha.vercel.app/contacts) â€¢
-[âš™ï¸ Live Backend API](https://contact-manager-api-production-0aa6.up.railway.app) â€¢
-[ðŸ’» Frontend Repository](https://github.com/AkramSE/Contact-Manager-UI) â€¢
-[ðŸ™ GitHub Profile](https://github.com/AkramSE)
+[Live Application](https://contact-manager-ui-alpha.vercel.app/contacts) |
+[Backend API](https://contact-manager-api-production-0aa6.up.railway.app) |
+[Frontend Repository](https://github.com/AkramSE/Contact-Manager-UI) |
+[GitHub Profile](https://github.com/AkramSE)
 
 </div>
 
 ---
 
-## ðŸ“‘ Table of Contents
+## Overview
 
-- [Overview](#-overview)
-- [Live Deployment](#-live-deployment)
-- [Cloud Infrastructure](#ï¸-cloud-infrastructure)
-- [Features](#-features)
-- [Technology Stack](#ï¸-technology-stack)
-- [System Architecture](#ï¸-system-architecture)
-- [JWT Authentication Flow](#-jwt-authentication-flow)
-- [Project Structure](#-project-structure)
-- [Database Design](#ï¸-database-design)
-- [Security](#-security)
-- [API Endpoints](#-api-endpoints)
-- [Validation](#-validation)
-- [Exception Handling](#-exception-handling)
-- [Logging](#-logging)
-- [Testing](#-testing)
-- [Local Development](#-local-development)
-- [Environment Variables](#-environment-variables)
-- [Cloud Deployment](#-cloud-deployment)
-- [Roadmap](#ï¸-roadmap)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Author](#-author)
+Contact Manager is a secure REST API for managing authenticated users and their personal contacts.
 
----
+The application uses a layered architecture and includes JWT authentication, contact CRUD operations, search, pagination, validation, centralized exception handling, logging, testing, and cloud deployment.
 
-## ðŸ“Œ Overview
+## Features
 
-**Contact Manager Enterprise REST API** is a secure backend application for managing authenticated users and their personal contacts.
+### Authentication
 
-It demonstrates modern backend development concepts, including:
-
-- RESTful API design
-- JWT-based authentication and authorization
-- BCrypt password encryption
-- DTO-based request and response handling
-- Layered enterprise architecture
-- Spring Data JPA and Hibernate persistence
-- Bean Validation
-- Global exception handling
-- Pagination and search
-- Structured application logging
-- Unit testing with JUnit 5 and Mockito
-- Production deployment using Railway and Aiven
-
-This backend serves the React-based Contact Manager frontend.
-
-### Frontend Application
-
-- **Live Application:**  
-  https://contact-manager-ui-alpha.vercel.app/contacts
-
-- **Frontend Repository:**  
-  https://github.com/AkramSE/Contact-Manager-UI
-
----
-
-## ðŸš€ Live Deployment
-
-| Service | Platform | Status | URL |
-|---|---|---|---|
-| Frontend | Vercel | ðŸŸ¢ Live | [Open Application](https://contact-manager-ui-alpha.vercel.app/contacts) |
-| Backend API | Railway | ðŸŸ¢ Live | [Open Backend](https://contact-manager-api-production-0aa6.up.railway.app) |
-| MySQL Database | Aiven Cloud | ðŸŸ¢ Live | Private production database |
-
-### Production URLs
-
-```text
-Frontend:
-https://contact-manager-ui-alpha.vercel.app/contacts
-
-Backend:
-https://contact-manager-api-production-0aa6.up.railway.app
-```
-
-> The Aiven database is private and accessed securely through environment variables configured in Railway.
-
----
-
-## â˜ï¸ Cloud Infrastructure
-
-```mermaid
-flowchart LR
-    U[User Browser] --> V[Vercel]
-    V --> F[React Frontend]
-    F -->|HTTPS REST Requests| R[Railway]
-    R --> B[Spring Boot REST API]
-    B --> S[Spring Security]
-    S --> J[JWT Authentication Filter]
-    J --> C[Controllers]
-    C --> SV[Service Layer]
-    SV --> RP[Repository Layer]
-    RP --> DB[(Aiven MySQL Database)]
-```
-
-| Platform | Responsibility |
-|---|---|
-| **Vercel** | Hosts and delivers the React frontend |
-| **Railway** | Hosts the Spring Boot backend |
-| **Aiven** | Hosts the production MySQL database |
-| **GitHub** | Source control and repository hosting |
-| **JWT** | Secures authenticated API requests |
-| **HTTPS** | Encrypts frontend-to-backend communication |
-
----
-
-## âœ¨ Features
-
-### Authentication and Security
-
-- Secure user registration
-- Secure user login
+- User registration and login
 - JWT token generation and validation
-- Stateless authentication
+- Stateless Spring Security configuration
 - BCrypt password hashing
 - Protected REST endpoints
-- Spring Security filter chain
-- Custom unauthorized-access handling
+- Custom authentication error handling
 - CORS configuration
-- Environment-based production secrets
 
 ### Contact Management
 
-- Create contacts
-- Retrieve contacts
+- Create a contact
+- Retrieve all contacts
 - Retrieve a contact by ID
-- Update contacts
-- Delete contacts
+- Update a contact
+- Delete a contact
 - Search contacts
-- Paginated contact retrieval
+- Paginated results
 - User-specific contact ownership
 
-### Architecture and Maintainability
+### Engineering
 
 - Layered architecture
-- DTO pattern
-- Dependency injection
-- Separation of concerns
+- DTO-based API contracts
+- Jakarta Bean Validation
 - Global exception handling
-- Bean Validation
-- Structured logging
-- Unit testing with mocks
-- Cloud-ready configuration
+- SLF4J and Logback logging
+- Unit testing with JUnit 5 and Mockito
+- Environment-based configuration
+- Cloud deployment
 
----
-
-## ðŸ› ï¸ Technology Stack
+## Technology Stack
 
 | Category | Technology |
 |---|---|
@@ -186,123 +69,88 @@ flowchart LR
 | Framework | Spring Boot 3.x |
 | Security | Spring Security |
 | Authentication | JSON Web Token |
-| Password Encryption | BCrypt |
+| Password Hashing | BCrypt |
 | Persistence | Spring Data JPA |
 | ORM | Hibernate |
 | Database | MySQL |
-| Production Database | Aiven MySQL |
 | Validation | Jakarta Bean Validation |
 | Build Tool | Maven |
 | Logging | SLF4J and Logback |
-| Testing | JUnit 5 |
-| Mocking | Mockito |
-| Backend Deployment | Railway |
-| Frontend Deployment | Vercel |
+| Testing | JUnit 5 and Mockito |
+| Backend Hosting | Railway |
+| Database Hosting | Aiven |
 | API Style | REST |
 | Data Format | JSON |
 
----
-
-## ðŸ—ï¸ System Architecture
+## Architecture
 
 ```mermaid
 flowchart TD
-    A[Client Application] --> B[Spring Security Filter Chain]
-    B --> C[JWT Authentication Filter]
-    C --> D[REST Controller]
-    D --> E[DTO Validation]
-    E --> F[Service Layer]
-    F --> G[Entity and DTO Mapping]
-    G --> H[Repository Layer]
-    H --> I[(MySQL Database)]
+    Client[React Client] --> Security[Spring Security Filter Chain]
+    Security --> JwtFilter[JWT Authentication Filter]
+    JwtFilter --> Controller[REST Controller]
+    Controller --> Validation[DTO Validation]
+    Validation --> Service[Service Layer]
+    Service --> Repository[Repository Layer]
+    Repository --> Database[(MySQL Database)]
 ```
 
 ### Layer Responsibilities
 
 | Layer | Responsibility |
 |---|---|
-| Controller | Receives HTTP requests and returns responses |
-| DTO | Controls API input and output |
+| Controller | Handles HTTP requests and responses |
+| DTO | Defines request and response contracts |
 | Service | Contains business logic |
 | Repository | Performs database operations |
-| Entity | Maps Java classes to database tables |
+| Entity | Maps Java objects to database tables |
 | Security | Authenticates users and protects endpoints |
-| Exception | Provides centralized error handling |
-| Configuration | Defines security, CORS, and application configuration |
+| Exception | Handles application errors centrally |
+| Configuration | Defines security, CORS, and application settings |
 
----
-
-## ðŸ” JWT Authentication Flow
+## JWT Authentication Flow
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant Frontend
+    participant Client
     participant AuthController
     participant AuthenticationManager
     participant Database
     participant JwtService
 
-    User->>Frontend: Enter email and password
-    Frontend->>AuthController: POST /api/auth/login
+    Client->>AuthController: POST /api/auth/login
     AuthController->>AuthenticationManager: Authenticate credentials
     AuthenticationManager->>Database: Load user
     Database-->>AuthenticationManager: User record
     AuthenticationManager-->>AuthController: Authentication successful
-    AuthController->>JwtService: Generate JWT
-    JwtService-->>AuthController: Signed token
-    AuthController-->>Frontend: Token and user data
+    AuthController->>JwtService: Generate token
+    JwtService-->>AuthController: Signed JWT
+    AuthController-->>Client: Authentication response
 ```
 
-### Protected Request
-
-```mermaid
-sequenceDiagram
-    participant Frontend
-    participant JwtFilter
-    participant SecurityContext
-    participant Controller
-    participant Service
-    participant Database
-
-    Frontend->>JwtFilter: Request with Bearer token
-    JwtFilter->>JwtFilter: Validate JWT
-    JwtFilter->>SecurityContext: Set authentication
-    JwtFilter->>Controller: Forward request
-    Controller->>Service: Execute business logic
-    Service->>Database: Read or update data
-    Database-->>Service: Result
-    Service-->>Controller: Response DTO
-    Controller-->>Frontend: JSON response
-```
-
-### Authorization Header
+Protected requests must include the token in the authorization header:
 
 ```http
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer <jwt-token>
 ```
 
----
-
-## ðŸ“ Project Structure
+## Project Structure
 
 ```text
 Contact-Manager-API/
 â”œâ”€â”€ src/
 â”‚   â”œâ”€â”€ main/
 â”‚   â”‚   â”œâ”€â”€ java/
-â”‚   â”‚   â”‚   â””â”€â”€ com/
-â”‚   â”‚   â”‚       â””â”€â”€ tenpearls/
-â”‚   â”‚   â”‚           â””â”€â”€ contact_manager/
-â”‚   â”‚   â”‚               â”œâ”€â”€ config/
-â”‚   â”‚   â”‚               â”œâ”€â”€ controller/
-â”‚   â”‚   â”‚               â”œâ”€â”€ dto/
-â”‚   â”‚   â”‚               â”œâ”€â”€ entity/
-â”‚   â”‚   â”‚               â”œâ”€â”€ exception/
-â”‚   â”‚   â”‚               â”œâ”€â”€ repository/
-â”‚   â”‚   â”‚               â”œâ”€â”€ security/
-â”‚   â”‚   â”‚               â”œâ”€â”€ service/
-â”‚   â”‚   â”‚               â””â”€â”€ ContactManagerApplication.java
+â”‚   â”‚   â”‚   â””â”€â”€ com/tenpearls/contact_manager/
+â”‚   â”‚   â”‚       â”œâ”€â”€ config/
+â”‚   â”‚   â”‚       â”œâ”€â”€ controller/
+â”‚   â”‚   â”‚       â”œâ”€â”€ dto/
+â”‚   â”‚   â”‚       â”œâ”€â”€ entity/
+â”‚   â”‚   â”‚       â”œâ”€â”€ exception/
+â”‚   â”‚   â”‚       â”œâ”€â”€ repository/
+â”‚   â”‚   â”‚       â”œâ”€â”€ security/
+â”‚   â”‚   â”‚       â”œâ”€â”€ service/
+â”‚   â”‚   â”‚       â””â”€â”€ ContactManagerApplication.java
 â”‚   â”‚   â””â”€â”€ resources/
 â”‚   â”‚       â”œâ”€â”€ application.properties
 â”‚   â”‚       â”œâ”€â”€ application-dev.properties
@@ -316,9 +164,7 @@ Contact-Manager-API/
 â””â”€â”€ README.md
 ```
 
----
-
-## ðŸ—„ï¸ Database Design
+## Database Design
 
 ```mermaid
 erDiagram
@@ -347,106 +193,86 @@ erDiagram
     }
 ```
 
-### Relationship
+A user can own multiple contacts, while each contact belongs to one user.
 
-```text
-One User can own many Contacts.
+## API Endpoints
 
-USER 1 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ N CONTACT
-```
-
----
-
-## ðŸ›¡ï¸ Security
-
-The application uses Spring Security with stateless JWT authentication.
-
-### Security Controls
-
-- Stateless session management
-- JWT token verification
-- BCrypt password encryption
-- Protected contact endpoints
-- Public authentication endpoints
-- Authentication entry point
-- Security context management
-- CORS restrictions
-- Contact ownership verification
-- Environment-based secrets
-
-### Public Endpoints
-
-```text
-POST /api/auth/register
-POST /api/auth/login
-```
-
-### Protected Endpoints
-
-```text
-GET    /api/contacts
-GET    /api/contacts/{id}
-POST   /api/contacts
-PUT    /api/contacts/{id}
-DELETE /api/contacts/{id}
-```
-
-### Stateless Session Policy
-
-```java
-SessionCreationPolicy.STATELESS
-```
-
----
-
-## ðŸŒ API Endpoints
-
-> Update endpoint paths if your actual controller mappings are different.
-
-### Authentication API
+### Authentication
 
 | Method | Endpoint | Access | Description |
 |---|---|---|---|
 | `POST` | `/api/auth/register` | Public | Register a new user |
-| `POST` | `/api/auth/login` | Public | Login and receive JWT |
+| `POST` | `/api/auth/login` | Public | Authenticate a user and return a JWT |
 
-### Contact API
+### Contacts
 
 | Method | Endpoint | Access | Description |
 |---|---|---|---|
 | `POST` | `/api/contacts` | Private | Create a contact |
 | `GET` | `/api/contacts` | Private | Retrieve contacts |
-| `GET` | `/api/contacts/{id}` | Private | Retrieve contact by ID |
+| `GET` | `/api/contacts/{id}` | Private | Retrieve a contact by ID |
 | `PUT` | `/api/contacts/{id}` | Private | Update a contact |
 | `DELETE` | `/api/contacts/{id}` | Private | Delete a contact |
 | `GET` | `/api/contacts/search` | Private | Search contacts |
 
-### Pagination Example
+### Pagination
 
 ```http
 GET /api/contacts?page=0&size=10&sort=name,asc
 ```
 
-### Search Example
+### Search
 
 ```http
 GET /api/contacts/search?keyword=akram
 ```
 
----
+## Request Examples
 
-## âœ… Validation
+### Register
 
-Common validation rules include:
+```http
+POST /api/auth/register
+Content-Type: application/json
 
-- Name must not be blank
-- Email must be valid
-- Password must satisfy minimum-length requirements
-- Required fields must not be null
-- Duplicate email addresses are rejected
-- Invalid contact IDs are handled safely
+{
+  "name": "Muhammad Akram",
+  "email": "akram@example.com",
+  "password": "StrongPassword123"
+}
+```
 
-### Example DTO
+### Login
+
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+  "email": "akram@example.com",
+  "password": "StrongPassword123"
+}
+```
+
+### Create Contact
+
+```http
+POST /api/contacts
+Content-Type: application/json
+Authorization: Bearer <jwt-token>
+
+{
+  "name": "Ali Khan",
+  "email": "ali@example.com",
+  "phone": "+92-300-1234567",
+  "address": "Karachi, Pakistan",
+  "description": "Professional contact"
+}
+```
+
+## Validation
+
+Example request validation:
 
 ```java
 public class RegisterRequest {
@@ -464,24 +290,13 @@ public class RegisterRequest {
 }
 ```
 
----
+The API validates required fields, email format, password length, duplicate users, and invalid resource identifiers.
 
-## âš ï¸ Exception Handling
+## Exception Handling
 
-Centralized exception handling is implemented using `@RestControllerAdvice`.
+Centralized exception handling is implemented with `@RestControllerAdvice`.
 
-### Handled Exceptions
-
-- Resource not found
-- Duplicate resource
-- Invalid credentials
-- Unauthorized access
-- Validation failure
-- Malformed requests
-- Database errors
-- Unexpected server errors
-
-### Example Error Response
+Example error response:
 
 ```json
 {
@@ -493,11 +308,23 @@ Centralized exception handling is implemented using `@RestControllerAdvice`.
 }
 ```
 
----
+### HTTP Status Codes
 
-## ðŸ“œ Logging
+| Code | Meaning |
+|---|---|
+| `200 OK` | Request completed successfully |
+| `201 Created` | Resource created successfully |
+| `204 No Content` | Resource deleted successfully |
+| `400 Bad Request` | Invalid input or validation failure |
+| `401 Unauthorized` | Missing or invalid authentication |
+| `403 Forbidden` | Access is not allowed |
+| `404 Not Found` | Resource was not found |
+| `409 Conflict` | Duplicate resource |
+| `500 Internal Server Error` | Unexpected server error |
 
-The project uses SLF4J with Logback.
+## Logging
+
+The application uses SLF4J with Logback.
 
 ```java
 private static final Logger log =
@@ -508,25 +335,11 @@ log.warn("Contact not found with ID: {}", contactId);
 log.error("Unexpected error while creating contact", exception);
 ```
 
-Sensitive information such as passwords, database credentials, and complete JWT tokens must never be logged.
+Passwords, database credentials, private keys, and complete JWT tokens must never be logged.
 
----
+## Testing
 
-## ðŸ§ª Testing
-
-The project uses JUnit 5 and Mockito.
-
-### Test Coverage Areas
-
-- Authentication business logic
-- Contact CRUD operations
-- Repository interactions
-- Validation behavior
-- Resource-not-found handling
-- Duplicate-user handling
-- Unauthorized-access scenarios
-
-### Run Tests
+Run tests with the Maven wrapper:
 
 ```bash
 ./mvnw test
@@ -538,24 +351,24 @@ Windows:
 mvnw.cmd test
 ```
 
-Installed Maven:
+Main testing areas:
 
-```bash
-mvn test
-```
+- Authentication logic
+- Contact CRUD operations
+- Repository interactions
+- Validation failures
+- Resource-not-found handling
+- Duplicate-user handling
+- Unauthorized access
 
----
+## Local Setup
 
-## ðŸ’» Local Development
+### Requirements
 
-### Prerequisites
-
-- Java 17+
-- Maven 3.8+
-- MySQL 8+
+- Java 17 or later
+- MySQL 8 or later
 - Git
-- IntelliJ IDEA, Eclipse, or VS Code
-- Postman or another REST client
+- Maven 3.8 or later, or the included Maven wrapper
 
 ### Clone Repository
 
@@ -570,9 +383,7 @@ cd Contact-Manager-API
 CREATE DATABASE contact_manager_db;
 ```
 
----
-
-## ðŸ”§ Environment Variables
+### Environment Variables
 
 ```env
 DB_URL=jdbc:mysql://localhost:3306/contact_manager_db
@@ -584,7 +395,7 @@ FRONTEND_URL=http://localhost:5173
 PORT=8080
 ```
 
-### Example `application.properties`
+### Application Configuration
 
 ```properties
 spring.application.name=contact-manager
@@ -594,12 +405,10 @@ server.port=${PORT:8080}
 spring.datasource.url=${DB_URL}
 spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
-
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=false
-spring.jpa.properties.hibernate.format_sql=true
 
 jwt.secret=${JWT_SECRET}
 jwt.expiration=${JWT_EXPIRATION:86400000}
@@ -607,93 +416,44 @@ jwt.expiration=${JWT_EXPIRATION:86400000}
 frontend.url=${FRONTEND_URL:http://localhost:5173}
 
 logging.level.root=INFO
-logging.level.com.tenpearls.contact_manager=DEBUG
 ```
 
-### Never Commit
+### Run Application
 
-```text
-Database passwords
-JWT secrets
-Aiven credentials
-Railway environment variables
-Private API keys
-```
-
-Add secret files to `.gitignore`:
-
-```gitignore
-.env
-application-local.properties
-application-secret.properties
-```
-
----
-
-## â–¶ï¸ Run the Application
-
-Linux or macOS:
+Linux and macOS:
 
 ```bash
-./mvnw clean install
-./mvnw spring-boot:run
+./mvnw clean spring-boot:run
 ```
 
 Windows:
 
 ```bash
-mvnw.cmd clean install
-mvnw.cmd spring-boot:run
+mvnw.cmd clean spring-boot:run
 ```
 
-Installed Maven:
-
-```bash
-mvn clean install
-mvn spring-boot:run
-```
-
-### Local Base URL
+Local API base URL:
 
 ```text
 http://localhost:8080
 ```
 
----
-
-## â˜ï¸ Cloud Deployment
+## Deployment
 
 ```mermaid
-flowchart TB
-    DEV[Developer] --> GH[GitHub]
-    GH --> VC[Vercel]
-    GH --> RW[Railway]
-    VC --> FE[React Frontend]
-    RW --> BE[Spring Boot Backend]
-    FE -->|HTTPS and JWT| BE
-    BE -->|Secure JDBC| AV[(Aiven MySQL)]
-    USER[End User] --> FE
+flowchart LR
+    User[User] --> Frontend[Vercel React Frontend]
+    Frontend -->|HTTPS and JWT| Backend[Railway Spring Boot API]
+    Backend -->|Secure JDBC| Database[(Aiven MySQL)]
 ```
 
-### Vercel Frontend
+| Service | Platform | URL |
+|---|---|---|
+| Frontend | Vercel | [Open Application](https://contact-manager-ui-alpha.vercel.app/contacts) |
+| Backend | Railway | [Open Backend API](https://contact-manager-api-production-0aa6.up.railway.app) |
+| Database | Aiven | Private production database |
 
-```text
-https://contact-manager-ui-alpha.vercel.app/contacts
-```
-
-Example frontend environment variable:
-
-```env
-VITE_API_BASE_URL=https://contact-manager-api-production-0aa6.up.railway.app
-```
-
-### Railway Backend
-
-```text
-https://contact-manager-api-production-0aa6.up.railway.app
-```
-
-Recommended Railway variables:
+Recommended production variables:
 
 ```env
 DB_URL=jdbc:mysql://your-aiven-host:your-port/defaultdb?ssl-mode=REQUIRED
@@ -705,107 +465,29 @@ FRONTEND_URL=https://contact-manager-ui-alpha.vercel.app
 PORT=8080
 ```
 
-### Aiven MySQL
+Never commit secrets or production credentials.
 
-The production MySQL database is hosted privately on Aiven and connected to Railway using secured environment variables.
-
----
-
-## ðŸ“¤ API Examples
-
-### Register
-
-```bash
-curl -X POST "http://localhost:8080/api/auth/register" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Muhammad Akram",
-    "email": "akram@example.com",
-    "password": "StrongPassword123"
-  }'
+```gitignore
+.env
+application-local.properties
+application-secret.properties
 ```
 
-### Login
-
-```bash
-curl -X POST "http://localhost:8080/api/auth/login" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "email": "akram@example.com",
-    "password": "StrongPassword123"
-  }'
-```
-
-### Create Contact
-
-```bash
-curl -X POST "http://localhost:8080/api/contacts" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
-  -d '{
-    "name": "Ali Khan",
-    "email": "ali@example.com",
-    "phone": "+92-300-1234567",
-    "address": "Karachi, Pakistan",
-    "description": "Professional contact"
-  }'
-```
-
-### Get Contacts
-
-```bash
-curl -X GET "http://localhost:8080/api/contacts?page=0&size=10" \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN"
-```
-
----
-
-## ðŸ§­ HTTP Status Codes
-
-| Code | Meaning |
-|---|---|
-| `200 OK` | Request completed successfully |
-| `201 Created` | Resource created successfully |
-| `204 No Content` | Resource deleted successfully |
-| `400 Bad Request` | Invalid input or validation error |
-| `401 Unauthorized` | Authentication missing or invalid |
-| `403 Forbidden` | Authenticated user lacks permission |
-| `404 Not Found` | Resource not found |
-| `409 Conflict` | Duplicate resource |
-| `500 Internal Server Error` | Unexpected server error |
-
----
-
-## ðŸ—ºï¸ Roadmap
+## Roadmap
 
 - [ ] Refresh tokens
 - [ ] Email verification
 - [ ] Forgot-password flow
 - [ ] Role-based access control
 - [ ] Swagger/OpenAPI documentation
-- [ ] Contact profile images
-- [ ] Contact categories and favorites
-- [ ] CSV import and export
 - [ ] Docker support
-- [ ] Redis caching
-- [ ] Rate limiting
-- [ ] Audit logging
 - [ ] Integration tests
 - [ ] GitHub Actions CI/CD
-- [ ] Code coverage reporting
-- [ ] Monitoring with Prometheus and Grafana
+- [ ] Rate limiting
+- [ ] Redis caching
+- [ ] Monitoring and metrics
 
----
-
-## ðŸ¤ Contributing
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Make your changes.
-4. Run the tests.
-5. Commit using a descriptive message.
-6. Push the branch.
-7. Open a pull request.
+## Contributing
 
 ```bash
 git checkout -b feature/your-feature-name
@@ -813,32 +495,18 @@ git commit -m "feat: add your feature"
 git push origin feature/your-feature-name
 ```
 
----
+Open a pull request with a clear description of the changes.
 
-## ðŸ“„ License
+## License
 
 This project is licensed under the MIT License.
 
-```text
-MIT License
+## Author
 
-Copyright (c) 2026 Muhammad Akram
+**Muhammad Akram**
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files, to deal in the Software
-without restriction, including without limitation the rights to use, copy,
-modify, merge, publish, distribute, sublicense, and sell copies of the
-Software.
-```
+Software Engineering Student and Java Spring Boot Backend Developer
 
----
-
-## ðŸ‘¨â€ðŸ’» Author
-
-<div align="center">
-
-### Muhammad Akram
-
-**Software Engineering Student | Java & Spring Boot Backend Developer**
-
-[![GitHub](https://img.shields.io/badge/GitHub-AkramSE-181717?style=for-the-badge&logo=github)](http
+- GitHub: [AkramSE](https://github.com/AkramSE)
+- Backend Repository: [Contact-Manager-API](https://github.com/AkramSE/Contact-Manager-API)
+- Frontend Repository: [Contact-Manager-UI](https://github.com/AkramSE/Contact-Manager-UI)
