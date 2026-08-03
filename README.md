@@ -365,18 +365,20 @@ cd Contact-Manager-API
 ```sql
 CREATE DATABASE contact_manager_db;
 ```
+## 🔒 Security Best Practices
 
-### Environment Variables
+> **Important:** Passwords, database credentials, private keys, and complete JWT tokens are never logged.
 
-```env
-DB_URL=jdbc:mysql://localhost:3306/contact_manager_db
-DB_USERNAME=root
-DB_PASSWORD=your_mysql_password
-JWT_SECRET=your_secure_jwt_secret
-JWT_EXPIRATION=86400000
-FRONTEND_URL=http://localhost:5173
-PORT=8080
-```
+Always use environment variables for sensitive data. Never commit secrets to version control.
+Configure your `application.properties` (or `application-prod.yml`) using the following structure:
+
+```properties
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+jwt.secret=${JWT_SECRET}
+jwt.expiration=${JWT_EXPIRATION}
+
 
 ### Application Configuration
 
@@ -470,12 +472,16 @@ Open a pull request with a clear description of the changes.
 
 This project is licensed under the MIT License.
 
-## Author
+## 👨‍💻 Author
 
-**Muhammad Akram**
+**Muhammad Akram**  
+*Software Engineering Student & Full-Stack Java Developer*
 
-Software Engineering Student and Java Spring Boot Backend Developer
+- 💼 **LinkedIn:** [linkedin.com/in/muhammad-akram-se](https://linkedin.com/in/muhammad-akram-se)
+- 🐙 **GitHub:** [github.com/AkramSE](https://github.com/AkramSE)
+- 🖥️ **Frontend Repository:** [Contact-Manager-UI](https://github.com/AkramSE/Contact-Manager-UI)
+- ⚙️ **Backend Repository:** [Contact-Manager-API](https://github.com/AkramSE/Contact-Manager-API)
 
-- GitHub: [AkramSE](https://github.com/AkramSE)
-- Backend Repository: [Contact-Manager-API](https://github.com/AkramSE/Contact-Manager-API)
-- Frontend Repository: [Contact-Manager-UI](https://github.com/AkramSE/Contact-Manager-UI)
+---
+*If you like this project, please consider giving it a ⭐ on GitHub!* 
+
